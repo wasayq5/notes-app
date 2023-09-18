@@ -80,4 +80,12 @@ body {
   .navbar-link:hover {
     text-decoration: underline;
   }
+
+.note {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+  }
   
