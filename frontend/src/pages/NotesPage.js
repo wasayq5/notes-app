@@ -19,7 +19,7 @@ export default function NotesPage() {
       </div>
       <div className="page-content">
         <Notes />
-        <div style={{ paddingTop: '30px' }}>
+        <div style={{ paddingTop: '20px' }}>
         <div className="form-container">
           <UpdateForm />
         </div>

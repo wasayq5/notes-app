@@ -14,17 +14,24 @@ export default function Note({ note }) {
 
   return (
     <div key={note._id}>
-      <h3>{note.title}
-      <button onClick={toggleExpansion}
-      style={{ borderRadius: '5px' }}>
-        {expanded ? "▲" : "▼"}
-      </button>
+      <h3>
+        {note.title}
+        <button onClick={toggleExpansion} style={{ borderRadius: '5px', marginLeft: '10px' }}>
+          {expanded ? "▲" : "▼"}
+        </button>
       </h3>
       {expanded && <p>{note.body}</p>} {/* Display body when expanded is true */}
-      <button onClick={() => store.deleteNote(note._id)}style={{ borderRadius: '10px' }}>Delete Note</button>
-      <button onClick={() => store.toggleUpdate(note)}style={{ borderRadius: '10px' }}>Update Note</button>
+      <div style={{ display: 'flex', marginTop: '10px' }}>
+        <button onClick={() => store.deleteNote(note._id)} style={{ borderRadius: '10px', marginRight: '10px' }}>
+          Delete
+        </button>
+        <button onClick={() => store.toggleUpdate(note)} style={{ borderRadius: '10px' }}>
+          Update
+        </button>
+      </div>
     </div>
   );
+  
 }
 
 
