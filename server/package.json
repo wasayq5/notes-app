@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
+    "start:app": "cd ../frontend && npm start",
+    "start": "concurrently \"npm run dev\" \"npm run start:app\"",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  }
+  ,
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,5 +22,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.4.5",
     "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
   }
 }
